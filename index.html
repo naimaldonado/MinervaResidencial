@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minerva Residencial | Gran Inauguración en Ramos Arizpe</title>
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'minerva-primary': '#009350', // Verde vibrante
+                        'minerva-dark': '#005132',    // Verde profundo bosque
+                        'minerva-bg': '#F4f4f1',      // Blanco hueso / Beige claro
+                        'minerva-accent': '#d5e8d2',  // Verde menta suave
+                        'white': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 81, 50, 0.75), rgba(0, 147, 80, 0.5)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .overlay-card {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #009350;
+            box-shadow: 0 0 0 2px rgba(0, 147, 80, 0.2);
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-minerva-bg text-minerva-dark">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-md border-b border-minerva-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Logo SVG con la nueva paleta -->
+                    <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 5L10 30V70L50 95L90 70V30L50 5Z" stroke="#009350" stroke-width="4"/>
+                        <path d="M50 20L30 35V65L50 80L70 65V35L50 20Z" fill="#005132"/>
+                        <text x="50" y="58" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat" font-weight="bold" font-size="20">M</text>
+                    </svg>
+                    <span class="text-xl font-extrabold tracking-tighter text-minerva-dark uppercase">Minerva <span class="text-minerva-primary">Residencial</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#amenidades" class="text-sm font-semibold hover:text-minerva-primary transition">Amenidades</a>
+                    <a href="#contacto" class="bg-minerva-dark text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-minerva-primary transition-all duration-300 shadow-lg shadow-minerva-dark/20">
+                        REGISTRAR ASISTENCIA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center hero-gradient pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl animate-fade-in">
+                <div class="inline-block bg-minerva-primary text-white px-4 py-1 rounded-sm text-xs font-bold tracking-widest uppercase mb-4 shadow-lg">
+                    Gran Inauguración • Ramos Arizpe
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    El entorno verde <br><span class="text-minerva-accent">que tu familia merece.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl font-light">
+                    Vive la experiencia de un complejo residencial diseñado para el equilibrio perfecto entre naturaleza, seguridad y plusvalía.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="bg-minerva-primary text-white px-8 py-4 rounded-md font-bold text-center hover:bg-white hover:text-minerva-dark transition-all transform hover:scale-105 shadow-xl">
+                        OBTENER INVITACIÓN VIP
+                    </a>
+                    <a href="#amenidades" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-bold text-center hover:bg-white/20 transition">
+                        VER AMENIDADES
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Info -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-sm font-bold text-minerva-primary uppercase tracking-[0.2em] mb-2">Un legado en Ramos Arizpe</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold mb-6 leading-tight text-minerva-dark">Más que una casa, es un espacio de plenitud.</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        En **Minerva Residencial**, cada detalle ha sido cuidado para ofrecerte un estilo de vida superior. Ubicado en una zona estratégica de Ramos Arizpe, garantizamos tranquilidad y conexión con lo que más importa.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-minerva-accent flex items-center justify-center">
+                                <svg class="w-4 h-4 text-minerva-dark" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="font-medium text-gray-700">Diseño arquitectónico contemporáneo</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-minerva-accent flex items-center justify-center">
+                                <svg class="w-4 h-4 text-minerva-dark" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="font-medium text-gray-700">Extensas áreas verdes y recreativas</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-minerva-accent flex items-center justify-center">
+                                <svg class="w-4 h-4 text-minerva-dark" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </div>
+                            <span class="font-medium text-gray-700">Plusvalía garantizada por ubicación</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dcea464dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Residencial Moderno" class="rounded-lg shadow-lg mt-8 border-b-4 border-minerva-primary">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jardín Residencial" class="rounded-lg shadow-lg border-t-4 border-minerva-dark">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Grid -->
+    <section id="amenidades" class="py-20 bg-minerva-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h2 class="text-minerva-accent font-bold tracking-widest uppercase text-sm mb-4">Exclusividad</h2>
+            <h3 class="text-4xl font-extrabold">Amenidades que Enamoran</h3>
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Espacios pensados para que cada día se sienta como un descanso total.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Amenity 1 -->
+                <div class="text-center p-8 border border-white/10 rounded-xl hover:bg-minerva-primary/20 transition group">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-minerva-primary/20 rounded-full group-hover:bg-minerva-primary transition">
+                        <svg class="w-8 h-8 text-minerva-primary group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Casa Club</h4>
+                    <p class="text-sm text-gray-400">El punto de encuentro social por excelencia.</p>
+                </div>
+                <!-- Amenity 2 -->
+                <div class="text-center p-8 border border-white/10 rounded-xl hover:bg-minerva-primary/20 transition group">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-minerva-primary/20 rounded-full group-hover:bg-minerva-primary transition">
+                        <svg class="w-8 h-8 text-minerva-primary group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Parque Central</h4>
+                    <p class="text-sm text-gray-400">Caminatas matutinas en un entorno seguro.</p>
+                </div>
+                <!-- Amenity 3 -->
+                <div class="text-center p-8 border border-white/10 rounded-xl hover:bg-minerva-primary/20 transition group">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-minerva-primary/20 rounded-full group-hover:bg-minerva-primary transition">
+                        <svg class="w-8 h-8 text-minerva-primary group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Gym & Wellness</h4>
+                    <p class="text-sm text-gray-400">Mantente en forma sin salir de tu privada.</p>
+                </div>
+                <!-- Amenity 4 -->
+                <div class="text-center p-8 border border-white/10 rounded-xl hover:bg-minerva-primary/20 transition group">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-minerva-primary/20 rounded-full group-hover:bg-minerva-primary transition">
+                        <svg class="w-8 h-8 text-minerva-primary group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Seguridad VIP</h4>
+                    <p class="text-sm text-gray-400">Monitoreo constante para tu total tranquilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto" class="py-24 bg-minerva-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="overlay-card p-10 md:p-16 rounded-3xl shadow-2xl max-w-5xl mx-auto flex flex-col md:flex-row gap-12 border border-minerva-accent">
+                <div class="md:w-1/2">
+                    <h2 class="text-minerva-primary font-bold tracking-widest uppercase text-sm mb-4">Día de Apertura</h2>
+                    <h3 class="text-4xl font-extrabold text-minerva-dark mb-6">Asegura tu lugar en el evento.</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Regístrate para recibir tu código de acceso VIP y conocer los **precios de preventa exclusivos** solo para el día de la inauguración.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-minerva-dark">
+                            <div class="w-10 h-10 bg-minerva-accent rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-minerva-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            </div>
+                            <span class="font-semibold text-sm">Carretera Ramos Arizpe - Saltillo KM 12</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-minerva-dark">
+                            <div class="w-10 h-10 bg-minerva-accent rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-minerva-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <span class="font-semibold text-sm">Este Sábado - 10:00 AM a 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 bg-white p-8 rounded-2xl shadow-inner border border-minerva-accent/30">
+                    <form id="contactForm" class="space-y-5">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-minerva-dark/60 mb-1">Nombre Completo</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-md bg-minerva-bg/50 border border-minerva-accent focus:bg-white transition" placeholder="Escribe tu nombre">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase text-minerva-dark/60 mb-1">WhatsApp</label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-md bg-minerva-bg/50 border border-minerva-accent focus:bg-white transition" placeholder="10 dígitos">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase text-minerva-dark/60 mb-1">Email</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-md bg-minerva-bg/50 border border-minerva-accent focus:bg-white transition" placeholder="tu@correo.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-minerva-dark/60 mb-1">¿Qué modelo te interesa?</label>
+                            <textarea name="comments" rows="2" class="w-full px-4 py-3 rounded-md bg-minerva-bg/50 border border-minerva-accent focus:bg-white transition" placeholder="Cuéntanos más..."></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn" class="w-full bg-minerva-primary text-white font-bold py-4 rounded-md shadow-lg hover:bg-minerva-dark transition-all duration-300 transform active:scale-95 tracking-widest text-sm">
+                            SOLICITAR ACCESO VIP
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center bg-minerva-dark/90 backdrop-blur-md px-4">
+        <div class="bg-white p-10 rounded-2xl max-w-md w-full text-center shadow-2xl border-t-8 border-minerva-primary">
+            <div class="w-20 h-20 bg-minerva-accent text-minerva-dark rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="text-2xl font-extrabold text-minerva-dark mb-2">¡Registro Confirmado!</h3>
+            <p class="text-gray-600 mb-8">Te hemos enviado un código QR a tu correo. Muéstralo en la entrada para obtener tus beneficios de preventa.</p>
+            <button onclick="closeModal()" class="w-full bg-minerva-primary text-white font-bold py-3 rounded-md hover:bg-minerva-dark transition uppercase text-sm tracking-widest">CERRAR</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-minerva-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center items-center gap-3 mb-6">
+                <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5L10 30V70L50 95L90 70V30L50 5Z" stroke="#009350" stroke-width="4"/>
+                    <text x="50" y="58" text-anchor="middle" fill="#005132" font-family="Montserrat" font-weight="bold" font-size="20">M</text>
+                </svg>
+                <span class="text-lg font-bold tracking-tighter text-minerva-dark uppercase">MINERVA <span class="text-minerva-primary">RESIDENCIAL</span></span>
+            </div>
+            <p class="text-gray-400 text-xs mb-4">© 2024 Minerva Residencial. Desarrollado por expertos en calidad de vida.</p>
+        </div>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const successModal = document.getElementById('successModal');
+        const submitBtn = document.getElementById('submitBtn');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'ENVIANDO REGISTRO...';
+            
+            setTimeout(() => {
+                successModal.classList.remove('hidden');
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'SOLICITAR ACCESO VIP';
+            }, 1200);
+        });
+
+        function closeModal() {
+            successModal.classList.add('hidden');
+        }
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-md');
+            } else {
+                nav.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
